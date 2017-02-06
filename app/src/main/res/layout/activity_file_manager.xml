@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/top_file_manage"
+        layout="@layout/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_height"/>
+    <LinearLayout
+        android:layout_weight="2"
+        android:background="#1324cc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center">
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已发现"/>
+            <TextView
+                android:id="@+id/activity_file_manager_tv"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 B"
+                android:textSize="30dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp">
+        <RelativeLayout
+            android:background="@drawable/pressed_gray_item"
+            android:id="@+id/file_manager_listview_item_rl_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:textColor="#3c3c3c"
+                android:id="@+id/file_manager_listview_item_tv_allname"
+                android:text="全部"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#3c3c3c"
+                android:layout_toRightOf="@id/file_manager_listview_item_tv_allname"
+                android:id="@+id/file_manager_listview_item_tv_allnumber"
+                android:text="0 B"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_arrows_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ProgressBar
+
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:id="@+id/file_manager_listview_item_pro_all"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp">
+        <RelativeLayout
+            android:background="@drawable/pressed_gray_item"
+            android:id="@+id/file_manager_listview_item_rl_file"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:textColor="#3c3c3c"
+                android:id="@+id/file_manager_listview_item_tv_filename"
+                android:text="文档"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#3c3c3c"
+                android:layout_toRightOf="@id/file_manager_listview_item_tv_filename"
+                android:id="@+id/file_manager_listview_item_tv_filenumber"
+                android:text="0 B"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_arrows_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ProgressBar
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:id="@+id/file_manager_listview_item_pro_file"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp">
+        <RelativeLayout
+            android:background="@drawable/pressed_gray_item"
+            android:id="@+id/file_manager_listview_item_rl_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:textColor="#3c3c3c"
+                android:id="@+id/file_manager_listview_item_tv_videoname"
+                android:text="视频"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#3c3c3c"
+                android:layout_toRightOf="@id/file_manager_listview_item_tv_videoname"
+                android:id="@+id/file_manager_listview_item_tv_videonumber"
+                android:text="0 B"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_arrows_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ProgressBar
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:id="@+id/file_manager_listview_item_pro_video"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp">
+        <RelativeLayout
+            android:background="@drawable/pressed_gray_item"
+            android:id="@+id/file_manager_listview_item_rl_vioce"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:textColor="#3c3c3c"
+                android:id="@+id/file_manager_listview_item_tv_voicename"
+                android:text="音频"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#3c3c3c"
+                android:layout_toRightOf="@id/file_manager_listview_item_tv_voicename"
+                android:id="@+id/file_manager_listview_item_tv_voicenumber"
+                android:text="0 B"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_arrows_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ProgressBar
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:id="@+id/file_manager_listview_item_pro_vioce"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp">
+        <RelativeLayout
+            android:background="@drawable/pressed_gray_item"
+            android:id="@+id/file_manager_listview_item_rl_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#3c3c3c"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/file_manager_listview_item_tv_picturename"
+                android:text="图片"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#3c3c3c"
+                android:layout_toRightOf="@id/file_manager_listview_item_tv_picturename"
+                android:id="@+id/file_manager_listview_item_tv_picturenumber"
+                android:text="0 B"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_arrows_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ProgressBar
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:id="@+id/file_manager_listview_item_pro_picture"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp">
+        <RelativeLayout
+            android:background="@drawable/pressed_gray_item"
+            android:id="@+id/file_manager_listview_item_rl_RAR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:textColor="#3c3c3c"
+                android:id="@+id/file_manager_listview_item_tv_RARname"
+                android:text="压缩包"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#3c3c3c"
+                android:layout_toRightOf="@id/file_manager_listview_item_tv_RARname"
+                android:id="@+id/file_manager_listview_item_tv_RARnumber"
+                android:text="0 B"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_arrows_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ProgressBar
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:id="@+id/file_manager_listview_item_pro_RAR"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp">
+        <RelativeLayout
+            android:background="@drawable/pressed_gray_item"
+            android:id="@+id/file_manager_listview_item_rl_program"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:textColor="#3c3c3c"
+                android:id="@+id/file_manager_listview_item_tv_programname"
+                android:text="程序包"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#3c3c3c"
+                android:layout_toRightOf="@id/file_manager_listview_item_tv_programname"
+                android:id="@+id/file_manager_listview_item_tv_programnumber"
+                android:text="0 B"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_arrows_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ProgressBar
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:id="@+id/file_manager_listview_item_pro_apk"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--<ListView-->
+        <!--android:id="@+id/activity_file_manager_listview"-->
+        <!--android:layout_weight="7"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"></ListView>-->
+
+</LinearLayout>

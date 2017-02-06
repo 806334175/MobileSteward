@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/activity_software_message_top"
+    layout="@layout/top"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_height"/>
+    <RelativeLayout
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ListView
+            android:background="@drawable/frame_border_gray"
+            android:id="@+id/activity_software_message_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"></ListView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:id="@+id/activity_software_message_pro_list"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <CheckBox
+
+            android:id="@+id/activity_software_message_checkall"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:button="@null"
+            android:background="@drawable/checkbox_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <Button
+            android:textColor="#ffffff"
+            android:id="@+id/activity_software_message_btn_delete"
+            android:text="卸载所选软件"
+            android:background="@drawable/btn_blue"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

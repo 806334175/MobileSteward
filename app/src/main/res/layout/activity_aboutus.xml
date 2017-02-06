@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/activity_aboutus_top"
+        layout="@layout/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_height"/>
+    <ImageView
+        android:id="@+id/activity_aboutus_iv"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/androidy"
+        android:layout_width="100dp"
+        android:layout_height="200dp" />
+    <TextView
+        android:id="@+id/activity_aboutus_tv_name"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/activity_aboutus_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/activity_aboutus_tv_version"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/activity_aboutus_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>
